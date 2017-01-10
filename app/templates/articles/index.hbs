@@ -6,13 +6,13 @@
     </tr>
   </thead>
   <tbody class="p1 h3">
-    {{#each model as |friend|}}
+    {{#each model as |article|}}
       <tr>
         <td class="border-bottom">
-          {{link-to friend.fullName "loans" friend}}
+          {{link-to article.name "articles.show" article}}
         </td>
         <td class="border-bottom">
-          <a href="#" {{action "delete" friend}}>Delete</a>
+          <a href="#" {{action "delete" article}}>Delete</a>
         </td>
       </tr>
     {{/each}}

@@ -42,7 +42,8 @@ export default Ember.Component.extend({
       // We are calling the cancel action passed down when rendering the
       // component: action=(action "cancel")
       //
-      this.cancel();
+      this.get('model').rollbackAttributes();
+      this.cancel(this.get('model'));
     }
   }
 });
