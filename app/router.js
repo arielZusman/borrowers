@@ -15,6 +15,7 @@ Router.map(function() {
       path: ':friend_id'
     }, function () {
       this.route('loans', {resetNamespace: true}, function() {
+        this.route('new');
       });
     });
 
